@@ -1,0 +1,105 @@
+@use '../abstaract'as *;
+.app{
+    margin: 30px 0 0 0;
+    height: 100%;
+    
+    &__title{
+        @include centerContentFlex;
+    }
+
+    &__test{
+        @include resetList;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        gap: $gutter-gap;
+    }
+
+    &__question{
+        @include centerContentFlex;
+        height: 200px;
+        font-size: 24px;
+        font-weight: 700px;
+        width: 100%;
+        padding: 0 30px 0 30px;
+        background-color: $question-bg-color;
+        border: 1px solid $border-default-color;
+        border-radius: 8px;
+    }
+
+    &__answer{  
+        @include centerContentFlex;
+        height: 75px;
+        font-size: 14px;
+        width: 100%;
+        padding: 0 30px 0 30px;
+        background-color: $answer-bg-color;
+        border: 1px solid $border-default-color;
+        border-radius: 8px;
+        transition: 300ms;
+        &:hover{
+            background-color: $answer-bg-hover-color;
+            border: 1px solid $border-hover-color;
+        }
+    }
+
+    &__testNavigation{
+        padding: 30px 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__testStatus{
+        font-size: 14px;
+        @include centerContentFlex;
+        flex-direction: column;
+        gap: 10px;
+        p{
+            margin: 0px;
+        }
+
+        &__testTime{
+            font-weight: 700;
+        }
+    }
+
+    &__questionsStatus{
+        @include resetList;
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0 0 0;
+        gap: 2px;
+        @include tablet{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__questionItem{
+        @include centerContentFlex;
+        border: 1px solid $border-default-color;
+        height: 40px;
+        width: 40px;
+        background-color: $answer-bg-color;
+        &:hover{
+            background-color: $answer-bg-hover-color;
+            border: 1px solid $border-hover-color;
+        }
+
+        @include tablet{
+            flex: 1 0 calc((100% - 28px) / 15);
+        }
+
+        @include medium-mobile{
+            flex: 1 0 calc((100% - 28px) / 10);
+        }
+    }
+
+    &__testQuestions{
+        @include medium-mobile{
+            display: none;
+        }
+    }
+}

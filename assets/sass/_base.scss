@@ -8,3 +8,16 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.container{
+    max-width: $max-container-size;
+    padding: 0 $gutter-gap;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.button{
+    padding: 15px 30px;
+    font-size: 20px;
+    // border-radius: 8px;
+}

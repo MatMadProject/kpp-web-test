@@ -1,5 +1,7 @@
-$smartphone: 600px;
+$mediumMobile: 450px;
+$largeMobile: 600px;
 $bigTablet: 905px;
+$tablet: 768px;
 $mediumDesktop: 1240px;
 $largeDesktop: 1440px;
 
@@ -21,8 +23,20 @@ $largeDesktop: 1440px;
     }
 }
 
-@mixin smartphone {
-    @media only screen and (max-width: $smartphone) {
+@mixin tablet {
+    @media only screen and (max-width: $tablet) {
+        @content
+    }
+}
+
+@mixin large-mobile {
+    @media only screen and (max-width: $largeMobile) {
+        @content
+    }
+}
+
+@mixin medium-mobile {
+    @media only screen and (max-width: $mediumMobile) {
         @content
     }
 }

@@ -13,3 +13,9 @@
     margin: 0;
     padding: 0;
 }
+
+@mixin centerContentFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,15 @@
+@use '../abstaract'as *;
+
+.footer{
+    margin: 10px 0 0 0  ;
+    padding: 0 0 10px 0;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    -webkit-box-shadow: inset 0px 24px 16px 0px $footer-bg-color;
+    -moz-box-shadow: inset 0px 24px 16px 0px $footer-bg-color;
+    box-shadow: inset 0px 24px 16px 0px $footer-bg-color;
+}
