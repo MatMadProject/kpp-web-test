@@ -1,0 +1,28 @@
+$smartphone: 600px;
+$bigTablet: 905px;
+$mediumDesktop: 1240px;
+$largeDesktop: 1440px;
+
+@mixin large-desktop {
+    @media only screen and (max-width: $largeDesktop) {
+        @content
+    }
+}
+
+@mixin medium-desktop {
+    @media only screen and (max-width: $mediumDesktop) {
+        @content
+    }
+}
+
+@mixin big-tablet {
+    @media only screen and (max-width: $bigTablet) {
+        @content
+    }
+}
+
+@mixin smartphone {
+    @media only screen and (max-width: $smartphone) {
+        @content
+    }
+}
