@@ -2,9 +2,9 @@
 .app{
     margin: 30px 0 0 0;
     height: 100%;
-    
     &__title{
         @include centerContentFlex;
+        padding: 30px 0;
     }
 
     &__test{
@@ -19,20 +19,24 @@
 
     &__question{
         @include centerContentFlex;
-        height: 200px;
-        font-size: 24px;
+        @include fluid-type(14px, 20px);
+        height: 300px;
+        // font-size: 24px;
         font-weight: 700px;
+        text-align: center;
         width: 100%;
-        padding: 0 30px 0 30px;
+        padding: 8px 30px;
         background-color: $question-bg-color;
         border: 1px solid $border-default-color;
         border-radius: 8px;
     }
 
     &__answer{  
-        @include centerContentFlex;
+        display: flex;
+        justify-content: start;
+        align-items: center;
         height: 75px;
-        font-size: 14px;
+        font-size: 16px;
         width: 100%;
         padding: 0 30px 0 30px;
         background-color: $answer-bg-color;
@@ -42,6 +46,9 @@
         &:hover{
             background-color: $answer-bg-hover-color;
             border: 1px solid $border-hover-color;
+        }
+        &--selected{
+            background-color: $answer-selected-bg-color;
         }
     }
 
@@ -87,6 +94,13 @@
             background-color: $answer-bg-hover-color;
             border: 1px solid $border-hover-color;
         }
+        &--answered{
+            background-color: $question-item-answered-bg-color;
+        }
+        &--active{
+            background-color: $question-item-active-bg-color;
+        }
+        
 
         @include tablet{
             flex: 1 0 calc((100% - 28px) / 15);
