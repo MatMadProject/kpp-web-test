@@ -1,9 +1,11 @@
 @use '../abstaract'as *;
+
 .app{
     margin: 30px 0 0 0;
     height: 100%;
     &__title{
         @include centerContentFlex;
+        text-align: center;
         padding: 30px 0;
     }
 
@@ -115,5 +117,19 @@
         @include medium-mobile{
             display: none;
         }
+    }
+}
+
+.animationCorrectAnswer{
+    animation: correctAnswer 1s ease-in-out .5s ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes correctAnswer{
+    0%{
+        background-color: $answer-bg-color;
+    }
+    100%{
+        background-color: $answer-correct-bg-color;
     }
 }

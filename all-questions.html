@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test - Kwalifikowana Pierwsza Pomoc</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="app">
+      <h1 class="app__title">Kwalifikowana Pierwsza Pomoc - Ratownik <br> Wszystkie pytania </h1>
+      <ul class="app__test">
+        <li id="question" class="app__question">question</li>
+        <li id="answer-1" class="app__answer">answer-a</li>
+        <li id="answer-2" class="app__answer">answer-b</li>
+        <li id="answer-3" class="app__answer">answer-c</li>
+        <li id="answer-4" class="app__answer">answer-d</li>
+        <li id="answer-5" class="app__answer">answer-e</li>
+      </ul>
+      <div class="app__testNavigation">
+        <a id="previousQuestion" class="button app__previousQuestion">Poprzednie</a>
+        <div class="app__testStatus">
+          <p id="questionNumber" class="app__testQuestions">Pytanie 1 z 30</p>
+          <p id="timer" class="app__testTime">00:00</p>
+        </div>
+        <a id="nextQuestion" class="button app__nextQuestion">Następne</a>
+      </div>
+    </div>
+
+  </div>
+  {{> footer}}
+
+  <script type="module" src="assets/js/all-questions.js"></script>
+</body>
+
+</html>

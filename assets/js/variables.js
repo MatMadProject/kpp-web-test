@@ -1,0 +1,2 @@
+export const LOCAL_STORAGE_PREFIX = "SARtHr";
+export const ALLQUESTION_LOCAL_STORAGE_SUFIX = "aMANds";
