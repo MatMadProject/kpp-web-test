@@ -1,0 +1,69 @@
+@use '../abstaract'as *;
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 12.5px 25px;
+
+    @include big-tablet{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__column1{
+        @include medium-desktop{
+            display: none;
+        }
+    }
+    
+    &__items{
+        @include resetList;
+        @include centerContentFlex;
+        gap: $gutter-gap;
+        padding: 30px 0;
+
+        @include large-mobile{
+            flex-direction: column;
+        }
+    }
+    &__item{
+        display: block;
+        text-align: center;
+        font-size: $font-size-button-navigation;
+        font-weight: 700;
+        padding: 30px;
+        width: 250px;
+        background-color: $answer-bg-color;
+        border: 1px solid $border-default-color;
+        border-radius: 8px;
+        transition: 300ms;
+        &:hover{
+            background-color: $answer-bg-hover-color;
+            border: 1px solid $border-hover-color;
+        }
+
+        @include big-tablet{
+            width: 175px;
+        }
+        @include large-mobile{
+            width: 150px;
+            padding: 15px;
+        }
+    }
+    &__column3{
+        @include centerContentFlex;
+        gap: 20px;
+        @include big-tablet{
+            order: -1;
+        }
+    }
+    &__login{
+        font-size: $font-size-button-navigation;
+        font-weight: 700;
+        @include medium-desktop{
+            display: none;
+        }
+    }
+}

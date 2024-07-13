@@ -1,4 +1,12 @@
 @use 'modern-normalize/modern-normalize.css';
+@use '@fortawesome/fontawesome-free/css/all.css';
+
 @use 'base';
 @use 'pages/app';
+@use 'pages/index';
+
 @use 'partials/footer';
+@use 'partials/navigation';
+
+@use 'elements/logo';
+@use 'elements/userLogo';

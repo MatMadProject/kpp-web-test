@@ -22,7 +22,7 @@ const saveData = () => {
 
 const LoadData = () => {
     currentQuestionIndex = localStorage.getItem(`${LOCAL_STORAGE_PREFIX}-currentQuestionIndex-${ALLQUESTION_LOCAL_STORAGE_SUFIX}`);
-    if (currentQuestionIndex == null) {
+    if (currentQuestionIndex === null) {
         currentQuestionIndex = 0;
     }
 }
@@ -39,7 +39,7 @@ previousQuestionRef.addEventListener("click", () => {
 
 nextQuestionRef.addEventListener("click", () => {
     currentQuestionIndex++;
-    if (currentQuestionIndex == 250) {
+    if (currentQuestionIndex === 250) {
         currentQuestionIndex = 0;
     }
     loadQuestionContentToView(loadedQuestions[currentQuestionIndex]);

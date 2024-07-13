@@ -1,0 +1,12 @@
+@use '../abstaract'as *;
+
+.user-logo{
+    color: $logo-font-color;
+    background-color: $logo-background-color;
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 50%;
+    @include centerContentFlex;
+}
